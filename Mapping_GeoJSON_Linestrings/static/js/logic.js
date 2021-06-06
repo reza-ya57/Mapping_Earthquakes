@@ -36,13 +36,13 @@ let map = L.map('mapid', {
 
 // Pass our map layers into our layers control and add the layers control to the map.
 L.control.layers(baseMaps).addTo(map);
-
+debugger
 //Accessing the airport GeoJSON URL
 var torontoData = "https://github.com/reza-ya57/Mapping_Earthquakes/blob/main/torontoRoutes.json"
 
 // Grabbing our GeoJSON data.
-d3.json(torontoData).then(function(data) {
-  debugger
+d3.json(torontoData).then(function(data)  {
+ 
   console.log(data);
   L.geoJSON(data).addTo(map);
 });
