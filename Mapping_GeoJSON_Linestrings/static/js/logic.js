@@ -38,12 +38,11 @@ let map = L.map('mapid', {
 L.control.layers(baseMaps).addTo(map);
 
 //Accessing the airport GeoJSON URL
-let torontoData = "https://github.com/reza-ya57/Mapping_Earthquakes/blob/main/torontoRoutes.json"
-  
+var torontoData = "https://github.com/reza-ya57/Mapping_Earthquakes/blob/main/torontoRoutes.json"
+
 // Grabbing our GeoJSON data.
 d3.json(torontoData).then(function(data) {
   debugger
-  corsorigin: 'no-cors';
   console.log(data);
   L.geoJSON(data).addTo(map);
 });
