@@ -35,7 +35,7 @@ let map = L.map('mapid', {
 })
 
 // Accessing the Toronto neighborhoods GeoJSON URL
-let torontoHoods = ""
+let torontoHoods = "https://raw.githubusercontent.com/reza-ya57/Mapping_Earthquakes/main/torontoNeighborhoods.json"
 
 // Pass our map layers into our layers control and add the layers control to the map.
 L.control.layers(baseMaps).addTo(map);
@@ -44,24 +44,38 @@ var torontoData = "https://raw.githubusercontent.com/reza-ya57/Mapping_Earthquak
 
 //Vreate a style for the lines
 let myStyle = {
-  color: "#ffffa1",
-  weight: 2
+  fillColor: "#ffffa1",
+  weight: 1,
+   fill: 'true',
+  
 }
 
 
 // Grabbing our GeoJSON data.
-d3.json(torontoData).then(function(data)  {
- 
-  
-  //Creating a GeoJson layer with the retrieved data.
+d3.json(torontoHoods).then(function(data) {
   console.log(data);
   L.geoJson(data, {
     style: myStyle,
-    onEachFeature: function(feature,layer){       
-      layer.bindPopup("<h2>Airline Code: "+feature.properties.airline+"</h2><hr><h3>Destination: "+feature.properties.dst+"</h2>");
+    onEachFeature: function(feature, layer){
+      layer.bindPopup("<h2>Neighborhood: "+feature.properties.AREA_NAME+"</h2>")
     }
+  
   }).addTo(map);
- });
+
+});
+
+// d3.json(torontoData).then(function(data)  {
+ 
+  
+//   //Creating a GeoJson layer with the retrieved data.
+//   console.log(data);
+//   L.geoJson(data, {
+//     style: myStyle,
+//     onEachFeature: function(feature,layer){       
+//       layer.bindPopup("<h2>Airline Code: "+feature.properties.airline+"</h2><hr><h3>Destination: "+feature.properties.dst+"</h2>");
+//     }
+//   }).addTo(map);
+//  });
   //  L.geoJSON(data, {
   //    onEachFeature: function(feature, layer) {
   //      console.log(layer);
