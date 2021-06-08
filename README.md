@@ -10,6 +10,7 @@
 #### Tectonic PLates:
 in this view you can see tectonics plates' location on the earth.
 
+![filter_city](https://github.com/reza-ya57/UFO/blob/main/static/images/filter_city.png)
 
 #### Earthquakes:
 In this view you can see the earthquakes in last 7 days around the world. Using the legend on the right bottom of the page to identify the magnitude of the earhtquake.
