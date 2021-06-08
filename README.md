@@ -1,7 +1,7 @@
 # Mapping_Earthquakes
 ## Map Description
 ### By using the GeoJSON technology and d3 library we prepared Earthquake Map of the world.
-### User can select three different view of the map as a layer to get the result in best view.
+### Users can select three different views of the map as a layer to get the result in his or her favorite view.
 ### Map contain 3 level of information:
 - Tectonic Plates
 - World earthquake info in last 7 days
