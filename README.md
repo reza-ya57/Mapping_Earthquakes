@@ -11,7 +11,7 @@
 #### How Can choose the layer?
 On top right section of the map there is an icon for selecting the different layer or map info. 
 
-![filter_city](https://github.com/reza-ya57/Mapping_Earthquakes/blob/Earthquake_Challenge/Earthquake_Challenge/static/images/Layer_selection.gif)
+![filter_city](https://github.com/reza-ya57/Mapping_Earthquakes/blob/Earthquake_Challenge/Earthquake_Challenge/static/images/Layer_selection2.gif)
 
 
 
